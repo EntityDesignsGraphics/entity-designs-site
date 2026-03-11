@@ -7,10 +7,21 @@
 <style>
 
 .hero {
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0f0f3a);
-  padding: 120px 20px;
+  position: relative;
+  background: url('your-background.jpg') center/cover no-repeat;
+  padding: 140px 20px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero * {
+  position: relative;
+}
     
 .portfolio-item {
     width: 150px;
